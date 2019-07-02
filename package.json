@@ -11,5 +11,12 @@
   },
   "engines": {
     "node": ">=6"
-  }
+  },
+  "keywords": [
+    "stack",
+    "es6",
+    "data",
+    "structure",
+    "typescript"
+  ]
 }
