@@ -3,6 +3,7 @@
 class Item {
   constructor(data) {
     this._data = data;
+    this._next = null;
   }
 }
 
