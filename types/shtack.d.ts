@@ -6,6 +6,7 @@ declare namespace stack {
   export interface Instance<T> {
     readonly size: number;
     clear(): this;
+    forEach(fn: (x: T) => void): this;
     includes(value: T): boolean;
     isEmpty(): boolean;
     peek(): T | undefined;

@@ -17,6 +17,17 @@ class Stack {
     return this;
   }
 
+  forEach(fn) {
+    let {_head: item} = this;
+
+    while (item) {
+      fn(item.value);
+      item = item.next;
+    }
+
+    return this;
+  }
+
   includes(value) {
     let {_head: item} = this;
 
