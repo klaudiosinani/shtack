@@ -32,7 +32,7 @@ class Stack {
   }
 
   isEmpty() {
-    return this._size === 0;
+    return !this._head && this._size === 0;
   }
 
   peek() {
