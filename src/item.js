@@ -13,6 +13,10 @@ class Item {
   set value(value) {
     this._value = value;
   }
+
+  get next() {
+    return this._next;
+  }
 }
 
 module.exports = Item;
