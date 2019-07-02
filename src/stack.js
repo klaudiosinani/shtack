@@ -16,6 +16,20 @@ class Stack {
     return this;
   }
 
+  includes(value) {
+    let {_head: node} = this;
+
+    while (node) {
+      if (node.data === value) {
+        return true;
+      }
+
+      node = node.next;
+    }
+
+    return false;
+  }
+
   isEmpty() {
     return this._size === 0;
   }
