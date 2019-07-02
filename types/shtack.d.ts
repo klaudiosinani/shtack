@@ -9,6 +9,7 @@ declare namespace stack {
     includes(value: T): boolean;
     isEmpty(): boolean;
     peek(): T | null;
+    push(value: T): this;
   }
 }
 
