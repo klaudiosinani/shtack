@@ -17,14 +17,14 @@ class Stack {
   }
 
   includes(value) {
-    let {_head: node} = this;
+    let {_head: item} = this;
 
-    while (node) {
-      if (node.data === value) {
+    while (item) {
+      if (item.value === value) {
         return true;
       }
 
-      node = node.next;
+      item = item.next;
     }
 
     return false;
@@ -32,6 +32,10 @@ class Stack {
 
   isEmpty() {
     return this._size === 0;
+  }
+
+  peek() {
+    return this._head;
   }
 }
 
