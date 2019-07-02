@@ -1,4 +1,5 @@
 'use strict';
+const Item = require('./item');
 
 class Stack {
   constructor() {
@@ -42,6 +43,15 @@ class Stack {
     }
 
     return null;
+  }
+
+  push(value) {
+    const {_head} = this;
+    const item = new Item(value);
+    item.next = _head;
+    this._head = item;
+    this._size += 1;
+    return this;
   }
 }
 
