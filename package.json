@@ -12,6 +12,7 @@
   "engines": {
     "node": ">=6"
   },
+  "types": "types/shtack.d.ts",
   "keywords": [
     "stack",
     "es6",
