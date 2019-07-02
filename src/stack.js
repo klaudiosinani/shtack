@@ -9,6 +9,10 @@ class Stack {
   get size() {
     return this._size;
   }
+
+  isEmpty() {
+    return this._size === 0;
+  }
 }
 
 module.exports = Stack;
