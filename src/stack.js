@@ -35,7 +35,13 @@ class Stack {
   }
 
   peek() {
-    return this._head;
+    const {_head} = this;
+
+    if (_head) {
+      return _head.value;
+    }
+
+    return null;
   }
 }
 
