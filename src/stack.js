@@ -33,6 +33,10 @@ class Stack {
   isEmpty() {
     return this._size === 0;
   }
+
+  peek() {
+    return this._head;
+  }
 }
 
 module.exports = Stack;
