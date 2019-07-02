@@ -42,7 +42,7 @@ class Stack {
       return _head.value;
     }
 
-    return null;
+    return undefined;
   }
 
   pop() {

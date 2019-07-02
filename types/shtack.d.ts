@@ -8,7 +8,7 @@ declare namespace stack {
     clear(): this;
     includes(value: T): boolean;
     isEmpty(): boolean;
-    peek(): T | null;
+    peek(): T | undefined;
     pop(): T | undefined;
     push(value: T): this;
   }
