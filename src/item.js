@@ -1,8 +1,8 @@
 'use strict';
 
 class Item {
-  constructor(data) {
-    this._data = data;
+  constructor(value) {
+    this._value = value;
     this._next = null;
   }
 }
