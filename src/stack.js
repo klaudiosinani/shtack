@@ -45,6 +45,18 @@ class Stack {
     return null;
   }
 
+  pop() {
+    const {_head} = this;
+
+    if (_head) {
+      this._head = _head.next;
+      this._size -= 1;
+      return _head.value;
+    }
+
+    return undefined;
+  }
+
   push(value) {
     const {_head} = this;
     const item = new Item(value);
