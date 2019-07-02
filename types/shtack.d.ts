@@ -5,6 +5,7 @@ declare namespace stack {
 
   export interface Instance<T> {
     readonly size: number;
+    clear(): this;
     isEmpty(): boolean;
   }
 }

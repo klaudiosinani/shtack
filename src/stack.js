@@ -10,6 +10,12 @@ class Stack {
     return this._size;
   }
 
+  clear() {
+    this._head = null;
+    this._size = 0;
+    return this;
+  }
+
   isEmpty() {
     return this._size === 0;
   }
