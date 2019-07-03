@@ -76,6 +76,12 @@ class Stack {
     this._size += 1;
     return this;
   }
+
+  toArray() {
+    const array = [];
+    this.forEach(x => array.push(x));
+    return array;
+  }
 }
 
 module.exports = Stack;
