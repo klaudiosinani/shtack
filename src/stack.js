@@ -14,6 +14,7 @@ class Stack {
 
   clear() {
     this._head = null;
+    this._last = null;
     this._size = 0;
     return this;
   }
