@@ -77,6 +77,25 @@ class Stack {
     return this;
   }
 
+  reverse() {
+    let {_head: current} = this;
+
+    if (current) {
+      let prev = null;
+
+      while (current) {
+        const {next} = current;
+        current.next = prev;
+        prev = current;
+        current = next;
+      }
+
+      this._head = prev;
+    }
+
+    return this;
+  }
+
   swap() {
     if (this.size >= 2) {
       const {next: snd} = this._head;
