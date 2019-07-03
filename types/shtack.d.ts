@@ -12,6 +12,7 @@ declare namespace stack {
     peek(): T | undefined;
     pop(): T | undefined;
     push(value: T): this;
+    swap(): this;
     toArray(): T[];
   }
 }

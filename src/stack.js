@@ -77,6 +77,17 @@ class Stack {
     return this;
   }
 
+  swap() {
+    if (this.size >= 2) {
+      const {next: snd} = this._head;
+      this._head.next = snd.next;
+      snd.next = this._head;
+      this._head = snd;
+    }
+
+    return this;
+  }
+
   toArray() {
     const array = [];
     this.forEach(x => array.push(x));
