@@ -4,6 +4,7 @@ const Item = require('./item');
 class Stack {
   constructor() {
     this._head = null;
+    this._last = null;
     this._size = 0;
   }
 
