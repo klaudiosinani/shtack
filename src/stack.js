@@ -96,6 +96,30 @@ class Stack {
     return this;
   }
 
+  rotateRight(n) {
+    let {_head: current} = this;
+    let count = n % this.size;
+
+    if (count > 0 && current) {
+      while (count > 1) {
+        current = current.next;
+        count -= 1;
+      }
+
+      const nth = current;
+
+      while (current.next) {
+        current = current.next;
+      }
+
+      current.next = this._head;
+      this._head = nth.next;
+      nth.next = null;
+    }
+
+    return this;
+  }
+
   swap() {
     const {next} = this._head;
 
