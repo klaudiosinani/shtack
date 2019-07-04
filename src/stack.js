@@ -73,6 +73,11 @@ class Stack {
   push(value) {
     const {_head} = this;
     const item = new Item(value);
+
+    if (!_head) {
+      this._last = item;
+    }
+
     item.next = _head;
     this._head = item;
     this._size += 1;
