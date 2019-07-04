@@ -95,6 +95,7 @@ class Stack {
 
     if (current) {
       let prev = null;
+      this._last = current;
 
       while (current) {
         const {next} = current;
