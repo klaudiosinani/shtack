@@ -4,7 +4,6 @@ const Item = require('./item');
 class Stack {
   constructor() {
     this._head = null;
-    this._last = null;
     this._size = 0;
   }
 
@@ -14,7 +13,6 @@ class Stack {
 
   clear() {
     this._head = null;
-    this._last = null;
     this._size = 0;
     return this;
   }
@@ -62,15 +60,9 @@ class Stack {
     const {_head} = this;
 
     if (_head) {
-      const {next, value} = _head;
-
-      if (!next) {
-        this._last = null;
-      }
-
-      this._head = next;
+      this._head = _head.next;
       this._size -= 1;
-      return value;
+      return _head.value;
     }
 
     return undefined;
@@ -79,11 +71,6 @@ class Stack {
   push(value) {
     const {_head} = this;
     const item = new Item(value);
-
-    if (!_head) {
-      this._last = item;
-    }
-
     item.next = _head;
     this._head = item;
     this._size += 1;
@@ -99,11 +86,6 @@ class Stack {
       while (current) {
         const {next} = current;
         current.next = prev;
-
-        if (!prev) {
-          this._last = current;
-        }
-
         prev = current;
         current = next;
       }
@@ -119,11 +101,6 @@ class Stack {
 
     if (next) {
       this._head.next = next.next;
-
-      if (!next.next) {
-        this._last = this._head;
-      }
-
       next.next = this._head;
       this._head = next;
     }
