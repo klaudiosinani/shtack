@@ -62,9 +62,15 @@ class Stack {
     const {_head} = this;
 
     if (_head) {
-      this._head = _head.next;
+      const {next, value} = _head;
+
+      if (!next) {
+        this._last = null;
+      }
+
+      this._head = next;
       this._size -= 1;
-      return _head.value;
+      return value;
     }
 
     return undefined;
