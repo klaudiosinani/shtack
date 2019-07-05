@@ -120,6 +120,10 @@ class Stack {
     return this;
   }
 
+  rotateLeft(n) {
+    return this._rotate(this.size - n);
+  }
+
   rotateRight(n) {
     return this._rotate(n);
   }
