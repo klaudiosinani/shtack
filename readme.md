@@ -27,6 +27,7 @@ Visit the [contributing guidelines](https://github.com/klaussinani/shtack/blob/m
 
 - [Description](#description)
 - [Install](#install)
+- [In Depth](#in-depth)
 - [Usage](#usage)
 - [Development](#development)
 - [Related](#related)
@@ -46,6 +47,15 @@ yarn add shtack
 ```bash
 npm install shtack
 ```
+
+## In Depth
+
+A stack is an data structure that serves as a collection of elements, with two principal operations:
+
+- `push` which adds an element to the collection, and
+- `pop` which removes the most recently added element that was not yet removed.
+
+Additionally, a `peek` operation gives access to the top element without mutating the stack. The order in which elements come off a stack gives rise to its alternative name, `LIFO` which stands for last in, first out. Shtack stacks are implemented using a linear singly linked list as their backbone, since stacks are linear data structures, or more abstractly sequential collections, where the `push` and `pop` operations occur only at one end of the structure, referred to as the `top` of the stack, which internally corresponds to the `head` node of the singly linked list.
 
 ## Usage
 
