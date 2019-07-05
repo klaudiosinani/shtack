@@ -64,6 +64,66 @@ Shtack exposes a chainable API, that can be utilized through a simple and minima
 Usage examples can be also found at the [`test`](https://github.com/klaussinani/shtack/tree/master/test) directory.
 
 ```js
+'use strict';
+const {Stack} = require('shtack');
+
+const stack = new Stack();
+//=> Stack { head: null, size: 0 }
+
+stack.isEmpty();
+//=> true
+
+stack.push(10);
+//=> Stack { head: Item { value: 10, next: null }, size: 1 }
+
+stack.isEmpty();
+//=> false
+
+stack.peek();
+//=> 10
+
+stack.push(20).push(30).push(40).push(50);
+//=> Stack { head: Item { value: 10, next:
+// Item { value: 20, next:
+// Item { value: 30, next:
+// Item { value: 40, next: 
+// Item { value: 50, next: null }} } } }, size: 5 }
+
+stack.includes(30);
+//=> true
+
+stack.includes(60);
+//=> false
+
+stack.pop();
+//=> 50
+
+stack.peek();
+//=> 40
+
+stack.toArray();
+//=> [ 10, 20, 30, 40 ]
+
+stack.rotateRight(3);
+//=> Stack { head: Item { value: 40, next:
+// Item { value: 10, next:
+// Item { value: 20, next:
+// Item { value: 30, next: null }} } } }, size: 4 }
+
+stack.toArray();
+//=> [ 40, 10, 20, 30 ]
+
+stack.rotateLeft(1);
+//=> Stack { head: Item { value: 30, next:
+// Item { value: 40, next:
+// Item { value: 10, next:
+// Item { value: 20, next: null }} } } }, size: 4 }
+
+stack.toArray();
+//=> [ 30, 40, 10, 20 ]
+
+stack.swap().duplicate().toArray();
+//=> [ 40, 40, 30, 10, 20 ]
 ```
 
 ## Development
