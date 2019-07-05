@@ -26,3 +26,19 @@ Visit the [contributing guidelines](https://github.com/klaussinani/shtack/blob/m
 ## Contents
 
 - [Description](#description)
+- [Install](#install)
+
+## Install
+
+### Yarn
+
+```bash
+yarn add shtack
+```
+
+### NPM
+
+```bash
+npm install shtack
+```
+
