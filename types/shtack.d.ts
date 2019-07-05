@@ -13,6 +13,7 @@ declare namespace stack {
     pop(): T | undefined;
     push(value: T): this;
     reverse(): this;
+    rotateLeft(): this;
     rotateRight(): this;
     swap(): this;
     toArray(): T[];
