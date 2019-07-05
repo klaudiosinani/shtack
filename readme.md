@@ -27,6 +27,7 @@ Visit the [contributing guidelines](https://github.com/klaussinani/shtack/blob/m
 
 - [Description](#description)
 - [Install](#install)
+- [Usage](#usage)
 
 ## Install
 
@@ -42,3 +43,11 @@ yarn add shtack
 npm install shtack
 ```
 
+## Usage
+
+Shtack exposes a chainable API, that can be utilized through a simple and minimal syntax, allowing you to combine methods effectively.
+
+Usage examples can be also found at the [`test`](https://github.com/klaussinani/shtack/tree/master/test) directory.
+
+```js
+```
