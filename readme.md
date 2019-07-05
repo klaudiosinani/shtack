@@ -28,6 +28,7 @@ Visit the [contributing guidelines](https://github.com/klaussinani/shtack/blob/m
 - [Description](#description)
 - [Install](#install)
 - [Usage](#usage)
+- [Development](#development)
 
 ## Install
 
@@ -51,3 +52,12 @@ Usage examples can be also found at the [`test`](https://github.com/klaussinani/
 
 ```js
 ```
+
+## Development
+
+For more info on how to contribute to the project, please read the [contributing guidelines](https://github.com/klaussinani/shtack/blob/master/contributing.md).
+
+- Fork the repository and clone it to your machine
+- Navigate to your local fork: `cd shtack`
+- Install the project dependencies: `npm install` or `yarn install`
+- Lint the code and run the tests: `npm test` or `yarn test`
