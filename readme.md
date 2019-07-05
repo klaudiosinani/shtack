@@ -29,6 +29,7 @@ Visit the [contributing guidelines](https://github.com/klaussinani/shtack/blob/m
 - [Install](#install)
 - [Usage](#usage)
 - [Development](#development)
+- [License](#license)
 
 ## Install
 
@@ -61,3 +62,7 @@ For more info on how to contribute to the project, please read the [contributing
 - Navigate to your local fork: `cd shtack`
 - Install the project dependencies: `npm install` or `yarn install`
 - Lint the code and run the tests: `npm test` or `yarn test`
+
+## License
+
+[MIT](https://github.com/klaussinani/shtack/blob/master/license.md)
