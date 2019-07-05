@@ -41,6 +41,18 @@ class Stack {
     return this;
   }
 
+  duplicate() {
+    const {_head} = this;
+
+    if (_head) {
+      const value = this.pop();
+      this.push(value);
+      this.push(value);
+    }
+
+    return this;
+  }
+
   forEach(fn) {
     let {_head: item} = this;
 
