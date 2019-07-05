@@ -11,6 +11,30 @@ class Stack {
     return this._size;
   }
 
+  _rotate(n) {
+    if (n > 0 && n < this.size) {
+      let count = n;
+      let {_head: current} = this;
+
+      while (count > 1) {
+        current = current.next;
+        count -= 1;
+      }
+
+      const nth = current;
+
+      while (current.next) {
+        current = current.next;
+      }
+
+      current.next = this._head;
+      this._head = nth.next;
+      nth.next = null;
+    }
+
+    return this;
+  }
+
   clear() {
     this._head = null;
     this._size = 0;
