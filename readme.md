@@ -83,7 +83,11 @@ stack.isEmpty();
 stack.peek();
 //=> 10
 
-stack.push(20).push(30).push(40).push(50);
+stack
+  .push(20)
+  .push(30)
+  .push(40)
+  .push(50);
 //=> Stack { head:
 // Item { value: 50, next:
 // Item { value: 40, next:
@@ -126,7 +130,10 @@ stack.rotateLeft(1);
 stack.toArray();
 //=> [ 20, 10, 40, 30 ]
 
-stack.swap().duplicate().toArray();
+stack
+  .swap()
+  .duplicate()
+  .toArray();
 //=> [ 10, 10, 20, 40, 30 ]
 
 stack.reverse().toArray();
@@ -146,7 +153,10 @@ const {Stack} = require('shtack');
 
 const stack = new Stack();
 
-stack.push(10).push(20).push(30);
+stack
+  .push(10)
+  .push(20)
+  .push(30);
 //=> Stack { head:
 // Item { value: 30, next:
 // Item { value: 20, next:
@@ -166,7 +176,10 @@ const {Stack} = require('shtack');
 
 const stack = new Stack();
 
-stack.push(10).push(20).push(30);
+stack
+  .push(10)
+  .push(20)
+  .push(30);
 //=> Stack { head:
 // Item { value: 30, next:
 // Item { value: 20, next:
@@ -190,7 +203,10 @@ const {Stack} = require('shtack');
 
 const stack = new Stack();
 
-stack.push(10).push(20).push(30);
+stack
+  .push(10)
+  .push(20)
+  .push(30);
 //=> Stack { head:
 // Item { value: 30, next:
 // Item { value: 20, next:
@@ -220,7 +236,11 @@ const {Stack} = require('shtack');
 
 const stack = new Stack();
 
-stack.push(10).push(20).push(30).push(40);
+stack
+  .push(10)
+  .push(20)
+  .push(30)
+  .push(40);
 //=> Stack { head:
 // Item { value: 40, next:
 // Item { value: 30, next:
@@ -250,7 +270,10 @@ const {Stack} = require('shtack');
 
 const stack = new Stack();
 
-stack.push(10).push(20).push(30);
+stack
+  .push(10)
+  .push(20)
+  .push(30);
 //=> Stack { head:
 // Item { value: 30, next:
 // Item { value: 20, next:
@@ -359,7 +382,10 @@ const {Stack} = require('shtack');
 
 const stack = new Stack();
 
-stack.push(10).push(20).push(30);
+stack
+  .push(10)
+  .push(20)
+  .push(30);
 //=> Stack { head:
 // Item { value: 30, next:
 // Item { value: 20, next:
@@ -388,7 +414,12 @@ const {Stack} = require('shtack');
 
 const stack = new Stack();
 
-stack.push(10).push(20).push(30).push(40).push(50);
+stack
+  .push(10)
+  .push(20)
+  .push(30)
+  .push(40)
+  .push(50);
 //=> Stack { head:
 // Item { value: 50, next:
 // Item { value: 40, next:
@@ -425,7 +456,12 @@ const {Stack} = require('shtack');
 
 const stack = new Stack();
 
-stack.push(10).push(20).push(30).push(40).push(50);
+stack
+  .push(10)
+  .push(20)
+  .push(30)
+  .push(40)
+  .push(50);
 //=> Stack { head:
 // Item { value: 50, next:
 // Item { value: 40, next:
@@ -456,7 +492,10 @@ const {Stack} = require('shtack');
 
 const stack = new Stack();
 
-stack.push(10).push(20).push(30);
+stack
+  .push(10)
+  .push(20)
+  .push(30);
 //=> Stack { head:
 // Item { value: 30, next:
 // Item { value: 20, next:
@@ -483,7 +522,12 @@ const {Stack} = require('shtack');
 
 const stack = new Stack();
 
-stack.push(10).push(20).push(30).push(40).push(50);
+stack
+  .push(10)
+  .push(20)
+  .push(30)
+  .push(40)
+  .push(50);
 //=> Stack { head:
 // Item { value: 50, next:
 // Item { value: 40, next:
