@@ -29,6 +29,7 @@ Visit the [contributing guidelines](https://github.com/klaussinani/shtack/blob/m
 - [Install](#install)
 - [In Depth](#in-depth)
 - [Usage](#usage)
+- [API](#api)
 - [Development](#development)
 - [Related](#related)
 - [Team](#team)
@@ -127,6 +128,367 @@ stack.swap().duplicate().toArray();
 
 stack.reverse().toArray();
 //=> [30, 40, 20, 10, 10]
+```
+
+## API
+
+#### stack.`size`
+
+- Return Type: `Number`
+
+Returns the total number of values in the stack.
+
+```js
+const {Stack} = require('shtack');
+
+const stack = new Stack();
+
+stack.push(10).push(20).push(30);
+//=> Stack { head:
+// Item { value: 30, next:
+// Item { value: 20, next:
+// Item { value: 10, next: null } } }, size: 3 }
+stack.size;
+//=> 3
+```
+
+#### stack.`clear()`
+
+- Return Type: `Stack`
+
+Mutates the stack by removing all residing values and returns it empty.
+
+```js
+const {Stack} = require('shtack');
+
+const stack = new Stack();
+
+stack.push(10).push(20).push(30);
+//=> Stack { head:
+// Item { value: 30, next:
+// Item { value: 20, next:
+// Item { value: 10, next: null } } }, size: 3 }
+stack.size;
+//=> 3
+stack.clear();
+//=> Stack { head: null, size: 0 }
+stack.size;
+//=> 0
+```
+
+#### stack.`duplicate()`
+
+- Return Type: `Stack`
+
+Mutates the stack by removing the top-most value, and then pushing it twice, so that an additional copy of the former top-most value is now on the top, with the original below it. Returns the stack itself.
+
+```js
+const {Stack} = require('shtack');
+
+const stack = new Stack();
+
+stack.push(10).push(20).push(30);
+//=> Stack { head:
+// Item { value: 30, next:
+// Item { value: 20, next:
+// Item { value: 10, next: null } } }, size: 3 }
+stack.duplicate();
+//=> Stack { head:
+// Item { value: 30, next:
+// Item { value: 30, next:
+// Item { value: 20, next:
+// Item { value: 10, next: null } } } }, size: 4 }
+```
+
+#### stack.`forEach(fn)`
+
+- Return Type: `Stack`
+
+Traverses the stack, top to bottom, and executes the provided `fn` function once for each traversed element without mutating the stack. Returns the stack itself at the end of the traversal.
+
+##### **`fn`**
+
+- Type: `Function`
+
+Unary function to execute for each traversed value.
+
+```js
+const {Stack} = require('shtack');
+
+const stack = new Stack();
+
+stack.push(10).push(20).push(30).push(40);
+//=> Stack { head:
+// Item { value: 40, next:
+// Item { value: 30, next:
+// Item { value: 20, next:
+// Item { value: 10, next: null } } } }, size: 4 }
+stack.forEach(console.log);
+//=> 40
+// 30
+// 20
+// 10
+```
+
+#### stack.`includes(value)`
+
+- Return Type: `Boolean`
+
+Determines whether the stack includes a certain `value`, returning `true` or `false` as appropriate.
+
+##### **`value`**
+
+- Type: `Any`
+
+Value to search for.
+
+```js
+const {Stack} = require('shtack');
+
+const stack = new Stack();
+
+stack.push(10).push(20).push(30);
+//=> Stack { head:
+// Item { value: 30, next:
+// Item { value: 20, next:
+// Item { value: 10, next: null } } }, size: 3 }
+stack.includes(10);
+//=> true
+stack.includes(40);
+//=> false
+stack.includes(20);
+//=> true
+```
+
+#### stack.`isEmpty()`
+
+- Return Type: `Boolean`
+
+Determines whether the stack is empty, returning `true` or `false` as appropriate.
+
+```js
+const {Stack} = require('shtack');
+
+const stack = new Stack();
+
+stack.push(10);
+//=> Stack { head: Item { value: 10, next: null }, size: 1 }
+stack.isEmpty();
+//=> false
+stack.clear().isEmpty();
+//=> true
+```
+
+#### stack.`peek()`
+
+- Return Type: `Any | undefined`
+
+Returns the top-most value of the stack, without mutating the stack itself.
+If the stack is empty `undefined` is returned.
+
+```js
+const {Stack} = require('shtack');
+
+const stack = new Stack();
+
+stack.push(10);
+//=> Stack { head: Item { value: 10, next: null }, size: 1 }
+stack.peek();
+//=> 10
+```
+
+#### stack.`pop()`
+
+- Return Type: `Any | undefined`
+
+Mutates the stack by removing and returning the top-most value.
+If the stack is empty `undefined` is returned.
+
+```js
+const {Stack} = require('shtack');
+
+const stack = new Stack();
+
+stack.push(10);
+//=> Stack { head: Item { value: 10, next: null }, size: 1 }
+stack.pop();
+//=> 10
+stack.pop();
+//=> undefined
+```
+
+#### stack.`push(value)`
+
+- Return Type: `Stack`
+
+Mutates the stack by inserting a new value at the top. Returns the stack itself.
+
+##### **`value`**
+
+- Type: `Any`
+
+Value to insert.
+
+```js
+const {Stack} = require('shtack');
+
+const stack = new Stack();
+
+stack.push(10);
+//=> Stack { head: Item { value: 10, next: null }, size: 1 }
+stack.push(20).push(30);
+//=> Stack { head:
+// Item { value: 30, next:
+// Item { value: 20, next:
+// Item { value: 10, next: null } } }, size: 3 }
+stack.size;
+//=> 3
+```
+
+#### stack.`reverse()`
+
+- Return Type: `Stack`
+
+Mutates the stack by reversing in-place the contained values. The top-most value becomes the bottom-most one, and the bottom-most one becomes the top-most. Returns the stack itself.
+
+```js
+const {Stack} = require('shtack');
+
+const stack = new Stack();
+
+stack.push(10).push(20).push(30);
+//=> Stack { head:
+// Item { value: 30, next:
+// Item { value: 20, next:
+// Item { value: 10, next: null } } }, size: 3 }
+stack.reverse();
+//=> Stack { head:
+// Item { value: 10, next:
+// Item { value: 20, next:
+// Item { value: 30, next: null } } }, size: 3 }
+```
+
+#### stack.`rotateLeft(n)`
+
+- Return Type: `Stack`
+
+Mutates the stack by moving the `n` bottom-most values to the top in a rotating fashion. Returns the stack itself.
+
+##### **`n`**
+
+- Type: `Number`
+
+Number of bottom-most values to be rotated.
+
+```js
+const {Stack} = require('shtack');
+
+const stack = new Stack();
+
+stack.push(10).push(20).push(30).push(40).push(50);
+//=> Stack { head:
+// Item { value: 50, next:
+// Item { value: 40, next:
+// Item { value: 30, next:
+// Item { value: 20, next:
+// Item { value: 10, next: null } } } } }, size: 5 }
+stack.toArray();
+//=> [ 50, 40, 30, 20, 10 ]
+stack.rotateLeft(2);
+//=> Stack { head:
+// Item { value: 20, next:
+// Item { value: 10, next:
+// Item { value: 50, next:
+// Item { value: 40, next:
+// Item { value: 30, next: null } } } } }, size: 5 }
+stack.toArray();
+//=> [ 20, 10, 50, 40, 30 ]
+```
+
+#### stack.`rotateRight(n)`
+
+- Return Type: `Stack`
+
+Mutates the stack by moving the `n` top-most values to the bottom in a rotating fashion. Returns the stack itself.
+
+##### **`n`**
+
+- Type: `Number`
+
+Number of top-most values to be rotated.
+
+```js
+const {Stack} = require('shtack');
+
+const stack = new Stack();
+
+stack.push(10).push(20).push(30).push(40).push(50);
+//=> Stack { head:
+// Item { value: 50, next:
+// Item { value: 40, next:
+// Item { value: 30, next:
+// Item { value: 20, next:
+// Item { value: 10, next: null } } } } }, size: 5 }
+stack.toArray();
+//=> [ 50, 40, 30, 20, 10 ]
+stack.rotateRight(2);
+//=> Stack { head:
+// Item { value: 30, next:
+// Item { value: 20, next:
+// Item { value: 10, next:
+// Item { value: 50, next:
+// Item { value: 40, next: null } } } } }, size: 5 }
+stack.toArray();
+//=> [ 30, 20, 10, 50, 40 ]
+```
+
+#### stack.`swap()`
+
+- Return Type: `Stack`
+
+Mutates the stack by exchanging the positions of the two top-most values. Returns the stack itself.
+
+```js
+const {Stack} = require('shtack');
+
+const stack = new Stack();
+
+stack.push(10).push(20).push(30);
+//=> Stack { head:
+// Item { value: 30, next:
+// Item { value: 20, next:
+// Item { value: 10, next: null } } }, size: 3 }
+stack.toArray();
+//=> [ 30, 20, 10 ]
+stack.swap();
+//=> Stack { head:
+// Item { value: 20, next:
+// Item { value: 30, next:
+// Item { value: 10, next: null } } }, size: 3 }
+stack.toArray();
+//=> [ 20, 30, 10 ]
+```
+
+#### stack.`toArray()`
+
+- Return Type: `Array<Any>`
+
+Traverses the stack, from top to bottom, and stores each traversed value in an array. The array is returned at the end of the traversal.
+
+```js
+const {Stack} = require('shtack');
+
+const stack = new Stack();
+
+stack.push(10).push(20).push(30).push(40).push(50);
+//=> Stack { head:
+// Item { value: 50, next:
+// Item { value: 40, next:
+// Item { value: 30, next:
+// Item { value: 20, next:
+// Item { value: 10, next: null } } } } }, size: 5 }
+stack.toArray();
+//=> [ 50, 40, 30, 20, 10 ]
 ```
 
 ## Development
