@@ -141,9 +141,8 @@ class Stack {
   }
 
   swap() {
-    const {next} = this._head;
-
-    if (next) {
+    if (this.size >= 2) {
+      const {next} = this._head;
       this._head.next = next.next;
       next.next = this._head;
       this._head = next;
