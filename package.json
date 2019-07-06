@@ -13,6 +13,11 @@
     "node": ">=6"
   },
   "types": "types/shtack.d.ts",
+  "files": [
+    "src",
+    "types",
+    "index.js"
+  ],
   "keywords": [
     "stack",
     "es6",
