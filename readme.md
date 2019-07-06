@@ -257,7 +257,7 @@ stack.forEach(console.log);
 
 - Return Type: `Boolean`
 
-Determines whether the stack includes a certain `value`, returning `true` or `false` as appropriate.
+Determines whether the stack includes a certain value, returning `true` or `false` as appropriate.
 
 ##### **`value`**
 
