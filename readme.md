@@ -84,7 +84,8 @@ stack.peek();
 //=> 10
 
 stack.push(20).push(30).push(40).push(50);
-//=> Stack { head: Item { value: 50, next:
+//=> Stack { head:
+// Item { value: 50, next:
 // Item { value: 40, next:
 // Item { value: 30, next:
 // Item { value: 20, next: 
@@ -106,7 +107,8 @@ stack.toArray();
 //=> [ 40, 30, 20, 10 ]
 
 stack.rotateRight(3);
-//=> Stack { head: Item { value: 10, next:
+//=> Stack { head:
+// Item { value: 10, next:
 // Item { value: 40, next:
 // Item { value: 30, next:
 // Item { value: 20, next: null } } } }, size: 4 }
@@ -115,7 +117,8 @@ stack.toArray();
 //=> [ 10, 40, 30, 20 ]
 
 stack.rotateLeft(1);
-//=> Stack { head: Item { value: 20, next:
+//=> Stack { head:
+// Item { value: 20, next:
 // Item { value: 10, next:
 // Item { value: 40, next:
 // Item { value: 30, next: null } } } }, size: 4 }
