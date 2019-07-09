@@ -1,7 +1,7 @@
 {
   "name": "shtack",
   "version": "1.0.0",
-  "description": "Stacks for ES6",
+  "description": "LIFO Stacks for ES6",
   "license": "MIT",
   "repository": "klaussinani/shtack",
   "author": {
