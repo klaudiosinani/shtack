@@ -3,7 +3,7 @@
 </h1>
 
 <h4 align="center">
-  Stacks for ES6
+  LIFO Stacks for ES6
 </h4>
 
 <p align="center">
