@@ -7,11 +7,11 @@
 </h4>
 
 <p align="center">
-  <a href="https://travis-ci.com/klaussinani/shtack">
-    <img alt="Build Status" src="https://travis-ci.com/klaussinani/shtack.svg?branch=master">
+  <a href="https://travis-ci.com/klaudiosinani/shtack">
+    <img alt="Build Status" src="https://travis-ci.com/klaudiosinani/shtack.svg?branch=master">
   </a>
-  <a href='https://coveralls.io/github/klaussinani/shtack?branch=master'>
-    <img alt="Coverage Status" src="https://coveralls.io/repos/github/klaussinani/shtack/badge.svg?branch=master">
+  <a href='https://coveralls.io/github/klaudiosinani/shtack?branch=master'>
+    <img alt="Coverage Status" src="https://coveralls.io/repos/github/klaudiosinani/shtack/badge.svg?branch=master">
   </a>
 </p>
 
@@ -19,9 +19,7 @@
 
 ES6 implementation of the stack data structure with TypeScript support.
 
-Come over to [Twitter](https://twitter.com/klaussinani) to share your thoughts on the project.
-
-Visit the [contributing guidelines](https://github.com/klaussinani/shtack/blob/master/contributing.md#translating-documentation) to learn more on how to translate this document into more languages.
+Visit the [contributing guidelines](https://github.com/klaudiosinani/shtack/blob/master/contributing.md#translating-documentation) to learn more on how to translate this document into more languages.
 
 ## Contents
 
@@ -62,7 +60,7 @@ Additionally, a `peek` operation gives access to the top element without mutatin
 
 Shtack exposes a chainable API, that can be utilized through a simple and minimal syntax, allowing you to combine methods effectively.
 
-Usage examples can be also found at the [`test`](https://github.com/klaussinani/shtack/tree/master/test) directory.
+Usage examples can be also found at the [`test`](https://github.com/klaudiosinani/shtack/tree/master/test) directory.
 
 ```js
 'use strict';
@@ -540,7 +538,7 @@ stack.toArray();
 
 ## Development
 
-For more info on how to contribute to the project, please read the [contributing guidelines](https://github.com/klaussinani/shtack/blob/master/contributing.md).
+For more info on how to contribute to the project, please read the [contributing guidelines](https://github.com/klaudiosinani/shtack/blob/master/contributing.md).
 
 - Fork the repository and clone it to your machine
 - Navigate to your local fork: `cd shtack`
@@ -549,19 +547,19 @@ For more info on how to contribute to the project, please read the [contributing
 
 ## Related
 
-- [avlbinstree](https://github.com/klaussinani/avlbinstree) - AVL self-balancing binary search trees for ES6
-- [binoheap](https://github.com/klaussinani/binoheap) - Binomial heaps for ES6
-- [binstree](https://github.com/klaussinani/binstree) - Binary search trees for ES6
-- [doublie](https://github.com/klaussinani/doublie) - Doubly circular & linear linked lists for ES6
-- [kiu](https://github.com/klaussinani/kiu) - FIFO Queues for ES6
-- [mheap](https://github.com/klaussinani/mheap) - Binary min & max heaps for ES6
-- [prioqueue](https://github.com/klaussinani/prioqueue) - Priority queues for ES6
-- [singlie](https://github.com/klaussinani/singlie) - Singly circular & linear linked lists for ES6
+- [avlbinstree](https://github.com/klaudiosinani/avlbinstree) - AVL self-balancing binary search trees for ES6
+- [binoheap](https://github.com/klaudiosinani/binoheap) - Binomial heaps for ES6
+- [binstree](https://github.com/klaudiosinani/binstree) - Binary search trees for ES6
+- [doublie](https://github.com/klaudiosinani/doublie) - Doubly circular & linear linked lists for ES6
+- [kiu](https://github.com/klaudiosinani/kiu) - FIFO Queues for ES6
+- [mheap](https://github.com/klaudiosinani/mheap) - Binary min & max heaps for ES6
+- [prioqueue](https://github.com/klaudiosinani/prioqueue) - Priority queues for ES6
+- [singlie](https://github.com/klaudiosinani/singlie) - Singly circular & linear linked lists for ES6
 
 ## Team
 
-- Klaus Sinani [(@klaussinani)](https://github.com/klaussinani)
+- Klaudio Sinani [(@klaudiosinani)](https://github.com/klaudiosinani)
 
 ## License
 
-[MIT](https://github.com/klaussinani/shtack/blob/master/license.md)
+[MIT](https://github.com/klaudiosinani/shtack/blob/master/license.md)

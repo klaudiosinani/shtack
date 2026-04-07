@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "LIFO Stacks for ES6",
   "license": "MIT",
-  "repository": "klaussinani/shtack",
+  "repository": "klaudiosinani/shtack",
   "author": {
-    "name": "Klaus Sinani",
-    "email": "klaussinani@gmail.com",
-    "url": "https://klaussinani.github.io"
+    "name": "Klaudio Sinani",
+    "email": "klaudiosinani@protonmail.ch",
+    "url": "https://klaudiosinani.com"
   },
   "engines": {
     "node": ">=6"
